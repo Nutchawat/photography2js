@@ -1,0 +1,3 @@
+export const SET_WORKII = 'SET_WORKII'
+export const GET_WORKII = 'GET_WORKII'
+export const RECEIVED_WORKII = 'RECEIVED_WORKII'
