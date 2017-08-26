@@ -1,86 +1,527 @@
+const baseImgPath = '/static/img/PersonalI/'
+
 export const mocker = {
   personalI () {
     return [{
-      'src': 'http://img3.chromatic.io/fe766076-f472-e5a5-f173-bded6975ce8a/small.jpg',
-      'ratio': 0.6645454545454546
+      src: baseImgPath + '1_YUKA/1_MG_3791_1.jpg',
+      ratio: 1.5047879616963065,
+      folder: '1_YUKA'
     }, {
-      'src': 'http://img3.chromatic.io/ebe0117b-9351-c1e4-2e51-51c88f4132fb/small.jpg',
-      'ratio': 0.6645454545454546
+      src: baseImgPath + '2_Maryna_white/1_MG_5426_1.jpg',
+      ratio: 0.6645454545454546,
+      folder: '2_Maryna_white'
     }, {
-      'src': 'http://img3.chromatic.io/0434dc64-0226-6250-30eb-42b282eefb40/small.jpg',
-      'ratio': 0.6645454545454546
+      src: baseImgPath + '3_Anna_WhiteWindow/1_MG_7507_1.jpg',
+      ratio: 0.6645454545454546,
+      folder: '3_Anna_WhiteWindow'
     }, {
-      'src': 'http://img3.chromatic.io/a54f0a9c-1dfc-c689-045d-e54f7e645872/small.jpg',
-      'ratio': 0.6645454545454546
+      src: baseImgPath + '4_PolinaFlower/1_MG_0775_1.jpg',
+      ratio: 0.6645454545454546,
+      folder: '4_PolinaFlower'
     }, {
-      'src': 'http://img3.chromatic.io/d8fb8ca6-3b46-d763-9dbf-fd8388402d1d/small.jpg',
-      'ratio': 0.6645454545454546
+      src: baseImgPath + '5_Haruna/1_MG_2815_1.jpg',
+      ratio: 0.6645454545454546,
+      folder: '5_Haruna'
     }, {
-      'src': 'http://img3.chromatic.io/0161d247-b64e-16f5-b4f9-27c33ad6451c/small.jpg',
-      'ratio': 1.5047879616963065
+      src: baseImgPath + '6_YokoyamaGREY/1_MG_0863.jpg',
+      ratio: 0.6645454545454546,
+      folder: '6_YokoyamaGREY'
     }, {
-      'src': 'http://img3.chromatic.io/cc10fccc-7cf9-04c3-1794-d8ba489d1119/small.jpg',
-      'ratio': 1.5049157303370786
+      src: baseImgPath + '7_HarunaGREY/_MG_2540_1.jpg',
+      ratio: 1.5049157303370786,
+      folder: '7_HarunaGREY'
     }, {
-      'src': 'http://img3.chromatic.io/3c1618ba-bddb-a51e-4fed-86c549eeb539/small.jpg',
-      'ratio': 0.6645454545454546
+      src: baseImgPath + '8_Georgia_Grey/1_MG_4222_1.jpg',
+      ratio: 0.6645454545454546,
+      folder: '8_Georgia_Grey'
     }, {
-      'src': 'http://img3.chromatic.io/1192ce85-5675-46f0-ddfc-6c49b5ccbb44/small.jpg',
-      'ratio': 1.5047879616963065
+      src: baseImgPath + '9_Maryna_ColorPaper/1_MG_5071_1.jpg',
+      ratio: 0.6645454545454546,
+      folder: '9_Maryna_ColorPaper'
     }, {
-      'src': 'http://img3.chromatic.io/cb744883-f13a-bf5b-ab9d-5edeafadccc7/small.jpg',
-      'ratio': 1.5047879616963065
+      src: baseImgPath + '10_Haruna_colorpaper/_MG_2660.jpg',
+      ratio: 1.5047879616963065,
+      folder: '10_Haruna_colorpaper'
     }, {
-      'src': 'http://img3.chromatic.io/fc5fdcc8-64f1-de56-74bc-e0518edeae5f/small.jpg',
-      'ratio': 1.5047879616963065
+      src: baseImgPath + '11_Peter/P1.jpg',
+      ratio: 0.6645454545454546,
+      folder: '11_Peter'
     }, {
-      'src': 'http://img3.chromatic.io/f2044ecb-671b-1cd3-10ca-ff84ff42936e/small.jpg',
-      'ratio': 1.5047879616963065
+      src: baseImgPath + '12_Thibaut/THI1.jpg',
+      ratio: 0.6645454545454546,
+      folder: '12_Thibaut'
     }, {
-      'src': 'http://img3.chromatic.io/618e41ea-4fcc-90d4-4295-f8ee4d87006e/small.jpg',
-      'ratio': 0.6645454545454546
+      src: baseImgPath + '13_Chris/Chris_1.jpg',
+      ratio: 0.6645454545454546,
+      folder: '13_Chris'
     }, {
-      'src': 'http://img3.chromatic.io/20b47a31-1ded-ec7d-a08d-7cd605189536/small.jpg',
-      'ratio': 1.5047879616963065
+      src: baseImgPath + '14_Tick/_MG_0492.jpg',
+      ratio: 1.5047879616963065,
+      folder: '14_Tick'
     }, {
-      'src': 'http://img3.chromatic.io/f30bed2b-1888-6f88-20c4-d3870a2a9d62/small.jpg',
-      'ratio': 0.6645454545454546
+      src: baseImgPath + '15_Movement/1_N4A1421PR_1.jpg',
+      ratio: 0.6645454545454546,
+      folder: '15_Movement'
     }, {
-      'src': 'http://img3.chromatic.io/b25db2e6-c7f8-a5a2-a3da-ab0601458676/small.jpg',
-      'ratio': 0.6645454545454546
+      src: baseImgPath + '16_Ohtake/_MG_8465Vol1.jpg',
+      ratio: 1.5047879616963065,
+      folder: '16_Ohtake'
     }, {
-      'src': 'http://img3.chromatic.io/7a9f09ad-f19b-95e7-9538-bc049810ec5a/small.jpg',
-      'ratio': 0.6645454545454546
+      src: baseImgPath + '17_Jay/1_MG_0764PR_1.jpg',
+      ratio: 0.6645454545454546,
+      folder: '17_Jay'
     }, {
-      'src': 'http://img3.chromatic.io/0a6526f7-477c-44db-1929-7dd28de8c629/small.jpg',
-      'ratio': 0.6645454545454546
+      src: baseImgPath + '18_Joy/Joy_1.jpg',
+      ratio: 0.6645454545454546,
+      folder: '18_Joy'
     }, {
-      'src': 'http://img3.chromatic.io/836fc934-b423-a2b2-26e9-66f6c0aea0a5/small.jpg',
-      'ratio': 1.5047879616963065
+      src: baseImgPath + '19_Naomi/1_MG_2253GG_2.jpg',
+      ratio: 0.664813343923749,
+      folder: '19_Naomi'
     }, {
-      'src': 'http://img3.chromatic.io/d7088a6f-4691-a502-4e37-43177ed6e293/small.jpg',
-      'ratio': 0.664813343923749
+      src: baseImgPath + '20_Maryna_TwoColor/_MG_5206.jpg',
+      ratio: 0.6645454545454546,
+      folder: '20_Maryna_TwoColor'
     }, {
-      'src': 'http://img3.chromatic.io/92f6bfdf-8308-bd67-ffbc-37ab19a7e345/small.jpg',
-      'ratio': 0.6645454545454546
+      src: baseImgPath + '21_Anna_Backpaper/1_MG_7810_1.jpg',
+      ratio: 0.6645454545454546,
+      folder: '21_Anna_Backpaper'
     }, {
-      'src': 'http://img3.chromatic.io/ca43eb5a-0cbf-2705-7d01-0432e55b0c6c/small.jpg',
-      'ratio': 1.5040797824116048
+      src: baseImgPath + '22_Yokoyama2way/_MG_0379.jpg',
+      ratio: 1.5047879616963065,
+      folder: '22_Yokoyama2way'
     }, {
-      'src': 'http://img3.chromatic.io/73511c34-65b8-250e-4460-2f04dbe7c8a8/small.jpg',
-      'ratio': 1.5047879616963065
+      src: baseImgPath + '23_Aya/1_MG_9579_1.jpg',
+      ratio: 0.6645454545454546,
+      folder: '23_Aya'
     }, {
-      'src': 'http://img3.chromatic.io/c3c03142-6a4e-e127-3709-62a981a1d1c4/small.jpg',
-      'ratio': 0.6645454545454546
+      src: baseImgPath + '24_Saya/_MG_2946.jpg',
+      ratio: 1.5058179329226558,
+      folder: '24_Saya'
     }, {
-      'src': 'http://img3.chromatic.io/22e58b3e-0150-593c-4c20-f069b5e04fff/small.jpg',
-      'ratio': 1.5058179329226558
+      src: baseImgPath + '25_Noonc2/_MG_5739.jpg',
+      ratio: 0.6645454545454546,
+      folder: '25_Noonc2'
     }, {
-      'src': 'http://img3.chromatic.io/2fbd62df-4081-6102-8126-3e52736951f1/small.jpg',
-      'ratio': 1.5047879616963065
+      src: baseImgPath + '26_Noonc1/1_Duo1_1.jpg',
+      ratio: 0.6645454545454546,
+      folder: '26_Noonc1'
     }, {
-      'src': 'http://img3.chromatic.io/6c969b53-95c0-d2ee-5e1b-d8a93f6f7fb6/small.jpg',
-      'ratio': 1.5047879616963065
+      src: baseImgPath + '27_yokoyama_location/1_MG_0591_1.jpg',
+      ratio: 0.6645454545454546,
+      folder: '27_yokoyama_location'
+    }, {
+      src: baseImgPath + '28_Georgia_Location/1_MG_4496_1.jpg',
+      ratio: 1.5058179329226558,
+      folder: '28_Georgia_Location'
+    }, {
+      src: baseImgPath + '29_Baifern/1_MG_3947_1.jpg',
+      ratio: 1.5058179329226558,
+      folder: '29_Baifern'
+    }, {
+      src: baseImgPath + '30_SatoRiho/SR1.jpg',
+      ratio: 1.5058179329226558,
+      folder: '30_SatoRiho'
+    }, {
+      src: baseImgPath + '31_Nishikawa/1_MG_5810.jpg',
+      ratio: 1.5058179329226558,
+      folder: '31_Nishikawa'
+    }, {
+      src: baseImgPath + '32_Yokoyama_Grey/1_MG_1129_1.jpg',
+      ratio: 0.6645454545454546,
+      folder: '32_Yokoyama_Grey'
+    }, {
+      src: baseImgPath + '33_Anna_Blackwindow/1_MG_7056_1.jpg',
+      ratio: 0.6645454545454546,
+      folder: '33_Anna_Blackwindow'
+    }, {
+      src: baseImgPath + '34_Weddingdress/1_MG_5891_1.jpg',
+      ratio: 0.6645454545454546,
+      folder: '34_Weddingdress'
     }]
+  },
+  personalIDetail (folder) {
+    let personalIDetail = [[{}]]
+    switch (folder) {
+      case '1_YUKA':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + '1_MG_3791_1.jpg',
+          ratio: 1.5047879616963065
+        }, {
+          src: baseImgPath + folder + '/' + '2_MG_3885_2.jpg',
+          ratio: 1.5047879616963065
+        }, {
+          src: baseImgPath + folder + '/' + '3_MG_3997_3.jpg',
+          ratio: 1.5047879616963065
+        }, {
+          src: baseImgPath + folder + '/' + '4_MG_4361_4.jpg',
+          ratio: 1.5047879616963065
+        }, {
+          src: baseImgPath + folder + '/' + '5_MG_4165_5.jpg',
+          ratio: 1.5047879616963065
+        }, {
+          src: baseImgPath + folder + '/' + '6_MG_4265_6.jpg',
+          ratio: 1.5047879616963065
+        }, {
+          src: baseImgPath + folder + '/' + '7_MG_4215_Big7.jpg',
+          ratio: 1.5049157303370786
+        }]
+        break
+      case '2_Maryna_white':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + '1_MG_5426_1.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '2_MG_5393_2.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '3_MG_5283_3.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '4_MG_5321_4.jpg',
+          ratio: 0.6645454545454546
+        }]
+        break
+      case '3_Anna_WhiteWindow':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + '1_MG_7507_1.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '2_MG_7408_2.jpg',
+          ratio: 0.6645454545454546
+        }]
+        break
+      case '4_PolinaFlower':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + '1_MG_0775_1.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '2_MG_0163_2.jpg',
+          ratio: 0.6645454545454546
+        }]
+        break
+      case '5_Haruna':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + '1_MG_2815_1.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '2_MG_2831_2.jpg',
+          ratio: 0.6645454545454546
+        }]
+        break
+      case '6_YokoyamaGREY':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + '1_MG_0863.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '2_MG_0927.jpg',
+          ratio: 0.6645454545454546
+        }]
+        break
+      case '7_HarunaGREY':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + '_MG_2540_1.jpg',
+          ratio: 1.5049157303370786
+        }]
+        break
+      case '8_Georgia_Grey':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + '1_MG_4222_1.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '2_MG_4076_2.jpg',
+          ratio: 0.6645454545454546
+        }]
+        break
+      case '9_Maryna_ColorPaper':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + '1_MG_5071_1.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '2_MG_5017_2.jpg',
+          ratio: 0.6645454545454546
+        }]
+        break
+      case '10_Haruna_colorpaper':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + '_MG_2660.jpg',
+          ratio: 1.5049157303370786
+        }]
+        break
+      case '11_Peter':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + 'P1.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + 'P2.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + 'P3.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + 'P4.jpg',
+          ratio: 0.6645454545454546
+        }]
+        break
+      case '12_Thibaut':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + 'THI1.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + 'THI2.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + 'THI3.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + 'THI4.jpg',
+          ratio: 0.6645454545454546
+        }]
+        break
+      case '13_Chris':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + 'Chris_1.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + 'Chris_2.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + 'Chris_3.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + 'Chris_4.jpg',
+          ratio: 0.6645454545454546
+        }]
+        break
+      case '14_Tick':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + '_MG_0492.jpg',
+          ratio: 1.5049157303370786
+        }]
+        break
+      case '15_Movement':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + '1_N4A1421PR_1.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '2_N4A1447PR_2.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '3_NS1_3.jpg',
+          ratio: 0.6645454545454546
+        }]
+        break
+      case '16_Ohtake':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + '_MG_8465Vol1.jpg',
+          ratio: 1.5049157303370786
+        }]
+        break
+      case '17_Jay':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + '1_MG_0764PR_1.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '2_MG_0809PR_2.jpg',
+          ratio: 0.6645454545454546
+        }]
+        break
+      case '18_Joy':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + 'Joy_1.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + 'Joy_2.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + 'Joy_3.jpg',
+          ratio: 0.6645454545454546
+        }]
+        break
+      case '19_Naomi':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + '1_MG_2253GG_2.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '2_MG_2493GG_1.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '3_MG_1977_3.jpg',
+          ratio: 0.6645454545454546
+        }]
+        break
+      case '20_Maryna_TwoColor':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + '_MG_5206.jpg',
+          ratio: 0.6645454545454546
+        }]
+        break
+      case '21_Anna_Backpaper':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + '1_MG_7810_1.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '2_MG_7623_2.jpg',
+          ratio: 0.6645454545454546
+        }]
+        break
+      case '22_Yokoyama2way':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + '_MG_0379.jpg',
+          ratio: 1.5049157303370786
+        }]
+        break
+      case '23_Aya':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + '1_MG_9579_1.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '2_MG_9142_2.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '3_MG_9296Longleg_3.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '4_MG_9918_4.jpg',
+          ratio: 0.6645454545454546
+        }]
+        break
+      case '24_Saya':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + '_MG_2946.jpg',
+          ratio: 1.5049157303370786
+        }]
+        break
+      case '25_Noonc2':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + '_MG_5739.jpg',
+          ratio: 0.6645454545454546
+        }]
+        break
+      case '26_Noonc1':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + '1_Duo1_1.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '2_JN_2.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '3_NN_3.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '4_Jlay_4.jpg',
+          ratio: 1.5049157303370786
+        }]
+        break
+      case '27_yokoyama_location':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + '1_MG_0591_1.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '2_MG_0596_2.jpg',
+          ratio: 1.5049157303370786
+        }]
+        break
+      case '28_Georgia_Location':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + '1_MG_4496_1.jpg',
+          ratio: 1.5049157303370786
+        }, {
+          src: baseImgPath + folder + '/' + '2_MG_4293_2.jpg',
+          ratio: 1.5049157303370786
+        }, {
+          src: baseImgPath + folder + '/' + '3_MG_4515_3.jpg',
+          ratio: 0.6645454545454546
+        }]
+        break
+      case '29_Baifern':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + '1_MG_2947_1.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '2_MG_3775_2.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '3_MG_3475_3.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '4_MG_3643_4.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '5_MG_2605_5.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '6_MG_2657_6.jpg',
+          ratio: 1.5049157303370786
+        }, {
+          src: baseImgPath + folder + '/' + '7_MG_3006_7.jpg',
+          ratio: 0.6645454545454546
+        }]
+        break
+      case '30_SatoRiho':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + 'SR1.jpg',
+          ratio: 1.5049157303370786
+        }, {
+          src: baseImgPath + folder + '/' + 'SR2.jpg',
+          ratio: 1.5049157303370786
+        }]
+        break
+      case '31_Nishikawa':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + '1_MG_5810.jpg',
+          ratio: 1.5049157303370786
+        }, {
+          src: baseImgPath + folder + '/' + '2_MG_5874.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '3_MG_5694BW.jpg',
+          ratio: 0.6645454545454546
+        }]
+        break
+      case '32_Yokoyama_Grey':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + '1_MG_1129_1.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '2_MG_1069_2.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '3_MG_1308_3.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '4_MG_1278_4.jpg',
+          ratio: 0.6645454545454546
+        }]
+        break
+      case '33_Anna_Blackwindow':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + '1_MG_7056_1.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '2_MG_7179_2.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '3_MG_6961-2_3.jpg',
+          ratio: 0.6645454545454546
+        }]
+        break
+      case '34_Weddingdress':
+        personalIDetail = [{
+          src: baseImgPath + folder + '/' + '1_MG_5891_1.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '2_MG_5809_2.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '3_MG_5804_3.jpg',
+          ratio: 0.6645454545454546
+        }, {
+          src: baseImgPath + folder + '/' + '4_MG_5689_4.jpg',
+          ratio: 0.6645454545454546
+        }]
+        break
+    }
+    return personalIDetail
   }
 }

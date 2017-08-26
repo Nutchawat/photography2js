@@ -1,11 +1,19 @@
 <template>
   <div name="personalI">
-    <vue-perfect-layout :photos="personalI"/>
+    <vue-perfect-layout v-show="indexDisp"
+                        :photos="personalI"
+                        :togglePage="togglePage"
+                        :receivedDetail="receivedPersonalIDetail"
+    />
+    <div v-if="detailDisp" @click="togglePage('index')" ><< Back</div>
+    <vue-perfect-layout v-show="detailDisp"
+                        :photos="personalIDetail"
+    />
   </div>
 </template>
 
 <script>
-  import { mapGetters, mapActions } from 'vuex'
+  import { mapGetters, mapMutations, mapActions } from 'vuex'
   import * as types from 'src/personalI/store/mutation-types'
 
   export default {
@@ -15,12 +23,19 @@
     },
     computed: {
       ...mapGetters({
-        personalI: types.GET_PERSONALI
+        indexDisp: types.GET_PERSONALI_INDEX_DISP,
+        detailDisp: types.GET_PERSONALI_DETAIL_DISP,
+        personalI: types.GET_PERSONALI,
+        personalIDetail: types.GET_PERSONALI_DETAIL
       })
     },
     methods: {
+      ...mapMutations({
+        togglePage: types.SET_PERSONALI_TOGGLE_PAGE
+      }),
       ...mapActions({
-        receivedPersonalI: types.RECEIVED_PERSONALI
+        receivedPersonalI: types.RECEIVED_PERSONALI,
+        receivedPersonalIDetail: types.RECEIVED_PERSONALI_DETAIL
       })
     }
   }

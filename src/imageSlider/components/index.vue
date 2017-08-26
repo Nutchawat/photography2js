@@ -1,8 +1,8 @@
 <template>
   <div name="image-sider">
-    <p>
+    <!-- <p>
       <a @click="prev">Previous</a> || <a @click="next">Next</a>
-    </p>
+    </p> -->
     <div class="rslides" v-for="number in [currentNumber]" transition="fade">
       <img :src="imagePath + images[Math.abs(currentNumber) % images.length]"
            v-on:mouseover="stopRotation"

@@ -25,8 +25,8 @@
       <ul class="clearfix font-size-body topnav" :class="{ 'responsive' : mobileMenuDisp }">
         <li class="layout-left font-size-header">
           <router-link :to="{ name: 'home' }">
-            <img alt="VVPHOTOGRAPHER" src="../../../static/img/VVLogo.svg" width="50" height="50">
-            <span>VV PHOTOGRAPHER</span>
+            <img alt="VVPHOTOGRAPHER" src="../../../static/img/Logo2017.svg" width="100" height="100">
+            <!-- <span>vvpfoto</span> -->
           </router-link>
         </li>
         <li class="clearfix nav-column layout-right" :class="{ 'active-page' : $route.name === 'personalI' }">
