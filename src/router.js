@@ -26,10 +26,7 @@ const routes = [
       moduleConfig('workI'),
       moduleConfig('workII'),
       moduleConfig('bio'),
-      moduleConfig('contact'),
-      moduleConfig('vueImagesTest'),
-      moduleConfig('vuePerfectLayoutTest'),
-      moduleConfig('lightGalleryTest')
+      moduleConfig('contact')
     ]
   }, {
     // not found handler

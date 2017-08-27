@@ -8,7 +8,7 @@ import App from 'src/App.vue'
 import { router } from 'src/router'
 import store from 'src/store'
 
-import imageSlider from 'src/imageSlider/components/index.vue'
+import vueImageSlider from 'src/vueImageSlider/components/index.vue'
 import vuePerfectLayout from 'src/vuePerfectLayout/components/index.vue'
 import vueLightGallery from 'src/vueLightGallery/components/index.vue'
 
@@ -16,7 +16,7 @@ const env = require('src/../env')
 
 Vue.use(VueRouter)
 Vue.use(VueResource)
-Vue.component('image-slider', imageSlider)
+Vue.component('vue-image-slider', vueImageSlider)
 Vue.component('vue-perfect-layout', vuePerfectLayout)
 Vue.component('vue-light-gallery', vueLightGallery)
 

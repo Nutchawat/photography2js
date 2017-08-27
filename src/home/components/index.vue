@@ -1,6 +1,6 @@
 <template>
   <div name="home">
-    <image-slider v-if="home.length > 0"
+    <vue-image-slider v-if="home.length > 0"
                   :imagePath="imagePath"
                   :images="home"/>
   </div>
