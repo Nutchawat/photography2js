@@ -1,6 +1,6 @@
 <template>
   <div name="vue-light-gallery" class="vuePerfectLayout">
-    <div @click="togglePage('index')" ><< Back</div>
+    <div @click="togglePage('index')" style="margin-left: 30px; cursor: pointer;"><< Back</div>
     <div id="gallery" class="vueLightGallery">
       <template v-for="photoColumnsRow in photoColumnsRows">
         <template v-for="photoColumnRow in photoColumnsRow">
@@ -75,7 +75,13 @@
       perfectLayout () {
         let windowWidth = document.documentElement.clientWidth || 0
         let windowHeight = document.documentElement.clientHeight || 0
-        const perfectColumnsRows = perfectLayout(this.photoRaws, windowWidth - 47, windowHeight, {margin: 2})
+        const perfectLayoutResult = perfectLayout(this.photoRaws, windowWidth - 47, windowHeight, {margin: 2})
+        let perfectColumnsRows = []
+        if (Array.isArray(perfectLayoutResult[0])) {
+          perfectColumnsRows = perfectLayoutResult
+        } else {
+          perfectColumnsRows.push(perfectLayoutResult)
+        }
         let photoColumnsRows = []
         let indexPhotoRaw = 0
         for (let indexRow = 0; indexRow < perfectColumnsRows.length; indexRow++) {
