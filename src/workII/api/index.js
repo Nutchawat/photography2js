@@ -5,5 +5,9 @@ export default {
   getWorkII () {
     if (isMock) return generator(mocker.workII())
     return instance().get(endpoint + '/workII')
+  },
+  getWorkIIDetail (folder) {
+    if (isMock) return generator(mocker.workIIDetail(folder))
+    return instance().get(endpoint + '/workIIDetail/' + folder)
   }
 }

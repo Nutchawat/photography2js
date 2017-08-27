@@ -1,11 +1,19 @@
 <template>
   <div name="workI">
-    <vue-perfect-layout :photos="workI"/>
+    <vue-perfect-layout v-show="indexDisp"
+                        :photos="workI"
+                        :togglePage="togglePage"
+                        :receivedDetail="receivedWorkIDetail"
+    />
+    <vue-light-gallery  v-show="detailDisp"
+                        :photos="workIDetail"
+                        :togglePage="togglePage"
+    />
   </div>
 </template>
 
 <script>
-  import { mapGetters, mapActions } from 'vuex'
+  import { mapGetters, mapMutations, mapActions } from 'vuex'
   import * as types from 'src/workI/store/mutation-types'
 
   export default {
@@ -15,12 +23,19 @@
     },
     computed: {
       ...mapGetters({
-        workI: types.GET_WORKI
+        indexDisp: types.GET_WORKI_INDEX_DISP,
+        detailDisp: types.GET_WORKI_DETAIL_DISP,
+        workI: types.GET_WORKI,
+        workIDetail: types.GET_WORKI_DETAIL
       })
     },
     methods: {
+      ...mapMutations({
+        togglePage: types.SET_WORKI_TOGGLE_PAGE
+      }),
       ...mapActions({
-        receivedWorkI: types.RECEIVED_WORKI
+        receivedWorkI: types.RECEIVED_WORKI,
+        receivedWorkIDetail: types.RECEIVED_WORKI_DETAIL
       })
     }
   }
