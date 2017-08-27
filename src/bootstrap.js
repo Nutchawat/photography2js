@@ -13,6 +13,9 @@ try {
   require('font-awesome/css/font-awesome.min.css')
   require('lightgallery/dist/css/lightgallery.min.css')
   require('lightslider/dist/css/lightslider.min.css')
+  require('lightgallery')
+  require('lg-fullscreen')
+  require('lg-thumbnail')
 } catch (e) {}
 
 /**

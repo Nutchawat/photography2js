@@ -5,9 +5,9 @@
                         :togglePage="togglePage"
                         :receivedDetail="receivedPersonalIDetail"
     />
-    <div v-if="detailDisp" @click="togglePage('index')" ><< Back</div>
-    <vue-perfect-layout v-show="detailDisp"
+    <vue-light-gallery  v-show="detailDisp"
                         :photos="personalIDetail"
+                        :togglePage="togglePage"
     />
   </div>
 </template>

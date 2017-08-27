@@ -1,10 +1,11 @@
 <template>
-  <div name="vue-perfect-layout" class="vuePerfectLayout">
-    <div id="gallery">
+  <div name="vue-light-gallery" class="vuePerfectLayout">
+    <div @click="togglePage('index')" ><< Back</div>
+    <div id="gallery" class="vueLightGallery">
       <template v-for="photoColumnsRow in photoColumnsRows">
         <template v-for="photoColumnRow in photoColumnsRow">
-          <a href="javascript:void(0)">
-            <div class="image" @click="triggerDetail(photoColumnRow.folder)">
+          <a :href="photoColumnRow.src">
+            <div class="image">
               <img :src="photoColumnRow.src"
                    :style="photoColumnRow.style" />
             </div>
@@ -16,13 +17,14 @@
 </template>
 
 <script>
+  import $ from 'jquery'
   import perfectLayout from 'src/../node_modules/perfect-layout/dist/perfectLayout.js'
 
   export default {
-    name: 'vue-perfect-layout',
+    name: 'vue-light-gallery',
     data () {
       return {
-        photoColumnsRows: [[{}]],
+        photoColumnsRows: [],
         photoRaws: this.photos
       }
     },
@@ -30,6 +32,9 @@
       photos (newVal) {
         this.photoRaws = newVal
         this.perfectLayout()
+        this.$nextTick(function () {
+          this.lightGallery()
+        })
       }
     },
     props: {
@@ -55,6 +60,17 @@
       triggerDetail (folder) {
         this.togglePage('detail')
         this.receivedDetail(folder)
+      },
+      lightGallery () {
+        let lg = $('.vueLightGallery')
+        if (typeof lg.data('lightGallery') !== 'undefined') {
+          lg.data('lightGallery').destroy(true)
+        }
+        lg.lightGallery({
+          thumbnail: true,
+          download: false,
+          showThumbByDefault: false
+        })
       },
       perfectLayout () {
         let windowWidth = document.documentElement.clientWidth || 0

@@ -7,7 +7,6 @@
       <img src="/static/img/HOME/7899651992_b09e5c1244_o.jpg" />
     </a>
   </div>
-  </div>
 </template>
 
 <script>
@@ -16,14 +15,10 @@
   export default {
     name: 'lightGalleryTest',
     mounted () {
-      require(['lightgallery'], function () {
-        require(['lg-fullscreen', 'lg-thumbnail'], function () {
-          $('#lightgallery').lightGallery({
-            thumbnail: true,
-            download: false,
-            showThumbByDefault: false
-          })
-        })
+      $('#lightgallery').lightGallery({
+        thumbnail: true,
+        download: false,
+        showThumbByDefault: false
       })
     }
   }

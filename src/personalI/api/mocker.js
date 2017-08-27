@@ -116,7 +116,7 @@ export const mocker = {
       folder: '28_Georgia_Location'
     }, {
       src: baseImgPath + '29_Baifern/1_MG_3947_1.jpg',
-      ratio: 1.5058179329226558,
+      ratio: 0.6645454545454546,
       folder: '29_Baifern'
     }, {
       src: baseImgPath + '30_SatoRiho/SR1.jpg',
@@ -436,7 +436,7 @@ export const mocker = {
         break
       case '29_Baifern':
         personalIDetail = [{
-          src: baseImgPath + folder + '/' + '1_MG_2947_1.jpg',
+          src: baseImgPath + folder + '/' + '1_MG_3947_1.jpg',
           ratio: 0.6645454545454546
         }, {
           src: baseImgPath + folder + '/' + '2_MG_3775_2.jpg',
