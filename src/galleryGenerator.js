@@ -1,5 +1,7 @@
 let config = require('src/../env')
-const baseImgPath = config.defaultBaseURL + config.baseImagePath
+var location = window.location
+var baseURL = (process.env.NODE_ENV !== 'development') ? location.protocol + '//' + location.host + '/' : config.defaultBaseURL
+const baseImgPath = baseURL + config.baseImagePath
 
 module.exports = {
   generateFolderImages (mockerJson) {

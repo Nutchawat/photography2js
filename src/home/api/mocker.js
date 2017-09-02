@@ -1,5 +1,7 @@
 let config = require('src/../env')
-let imagePath = config.defaultBaseURL + config.baseImagePath
+var location = window.location
+var baseURL = (process.env.NODE_ENV !== 'development') ? location.protocol + '//' + location.host + '/' : config.defaultBaseURL
+let imagePath = baseURL + config.baseImagePath
 let galleryGenerator = require('src/galleryGenerator')
 
 export const mocker = {
@@ -7,7 +9,7 @@ export const mocker = {
     let folders = [ 'personalI', 'personalII', 'workI', 'workII' ]
     let mockHome = []
     for (let folder of folders) {
-      let jsonFolderImage = require('src/' + folder + '/api/' + folder + '.json')
+      let jsonFolderImage = require('src/../static/img/' + folder + '.json')
       for (let subFolder of jsonFolderImage.subFolder) {
         let isHomePathImages = subFolder.images.filter((image) => {
           return image.isHome
@@ -26,7 +28,7 @@ export const mocker = {
     })
   },
   homeDetail ({ folder, subFolder }) {
-    let mockerJson = require('src/' + folder + '/api/' + folder + '.json')
+    let mockerJson = require('src/../static/img/' + folder + '.json')
     return galleryGenerator.generateDetailImages(mockerJson, subFolder)
   }
 }

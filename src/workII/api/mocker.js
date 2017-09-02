@@ -1,4 +1,4 @@
-let mockerJson = require('src/workII/api/workII.json')
+let mockerJson = require('src/../static/img/workII.json')
 let galleryGenerator = require('src/galleryGenerator')
 
 export const mocker = {

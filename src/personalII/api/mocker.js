@@ -1,4 +1,4 @@
-let mockerJson = require('src/personalII/api/personalII.json')
+let mockerJson = require('src/../static/img/personalII.json')
 let galleryGenerator = require('src/galleryGenerator')
 
 export const mocker = {
