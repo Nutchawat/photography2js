@@ -5,6 +5,7 @@ import swal from 'sweetalert'
 export default {
   state: {
     dashBodyLoading: true,
+    dashFooterDisp: false,
     dashFooter: {
       facebook: '',
       instagram: '',
@@ -16,6 +17,9 @@ export default {
     [types.GET_DASH_BODY_LOADING] (state) {
       return state.dashBodyLoading
     },
+    [types.GET_DASH_FOOTER_DISP] (state) {
+      return state.dashFooterDisp
+    },
     [types.GET_DASH_FOOTER] (state) {
       return state.dashFooter
     }
@@ -23,6 +27,9 @@ export default {
   mutations: {
     [types.SET_DASH_BODY_LOADING] (state, dashBodyLoading) {
       state.dashBodyLoading = dashBodyLoading
+    },
+    [types.SET_DASH_FOOTER_DISP] (state, dashFooterDisp) {
+      state.dashFooterDisp = dashFooterDisp
     },
     [types.SET_DASH_FOOTER] (state, dashFooter) {
       state.dashFooter = dashFooter

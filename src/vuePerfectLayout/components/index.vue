@@ -6,7 +6,8 @@
           <a href="javascript:void(0)">
             <div class="image" @click="triggerDetail(photoColumnRow.folder)">
               <img :src="photoColumnRow.src"
-                   :style="photoColumnRow.style" />
+                   :style="photoColumnRow.style"
+                   @contextmenu="disabledRightClick" />
             </div>
           </a>
         </template>
@@ -52,6 +53,9 @@
       this.perfectLayout()
     },
     methods: {
+      disabledRightClick (event) {
+        event.preventDefault()
+      },
       triggerDetail (folder) {
         this.togglePage('detail')
         this.receivedDetail(folder)

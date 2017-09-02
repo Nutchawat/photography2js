@@ -7,7 +7,8 @@
           <a :href="photoColumnRow.src">
             <div class="image">
               <img :src="photoColumnRow.src"
-                   :style="photoColumnRow.style" />
+                   :style="photoColumnRow.style"
+                   @contextmenu="disabledRightClick" />
             </div>
           </a>
         </template>
@@ -57,6 +58,15 @@
       this.perfectLayout()
     },
     methods: {
+      disabledRightClick (event) {
+        this.$nextTick(() => {
+          var lightGalleryElement = document.getElementsByClassName('lg-object')
+          if (lightGalleryElement.length > 0) {
+            lightGalleryElement[0].addEventListener('contextmenu', event => event.preventDefault())
+          }
+        })
+        event.preventDefault()
+      },
       triggerDetail (folder) {
         this.togglePage('detail')
         this.receivedDetail(folder)

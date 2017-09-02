@@ -8,11 +8,13 @@
             :style="{
               position: 'relative',
               height: divHeight,
-              width: divWidth
+              width: divWidth,
+              cursor: 'pointer'
             }">
         <img :src="photos[currentNumber].name"
-             v-on:mouseover="stopRotation"
-             v-on:mouseout="startRotation"
+             @mouseover="stopRotation"
+             @mouseout="startRotation"
+             @contextmenu="disabledRightClick"
              :style="{
                height: imgHeight,
                width: imgWidth,
@@ -63,6 +65,9 @@
       this.handleResize()
     },
     methods: {
+      disabledRightClick (event) {
+        event.preventDefault()
+      },
       handleResize () {
         this.width = window.innerWidth || 0
         this.height = window.innerHeight || 0
