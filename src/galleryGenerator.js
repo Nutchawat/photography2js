@@ -15,6 +15,11 @@ module.exports = {
             } else if (image.display === 'H') {
               ratio = 0.6645454545454546
             }
+            /*
+            let img = document.createElement('img')
+            img.src = baseImgPath + folder + '/' + subFolder.folderName + '/' + image.name
+            ratio = img.width / img.height
+            */
             mockerIndex.push({
               src: baseImgPath + folder + '/' + subFolder.folderName + '/' + image.name,
               ratio: ratio,

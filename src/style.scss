@@ -23,12 +23,11 @@
     line-height: 28px;
   }
 
-  #etc,
-  #personal,
-  #portrait,
-  #women,
-  #still,
-  #men,
+  #personalI,
+  #personalII,
+  #workI,
+  #workII,
+  #contact,
   #bio {
     padding: 9px 0 6px 6px;
   }
@@ -58,12 +57,12 @@
     background: #000000;
   }
 
-  .bio-text {
+  .bio-text, .contact-text {
     background: #ffffff;
     padding: 5px;
   }
 
-  .text-bio-header {
+  .text-bio-header, .text-contact-header, .text-underconstruction-header {
     background: #fff;
     margin: 100px 50px 0 50px;
     padding: 10px 0 10px 0;
@@ -122,7 +121,7 @@
   /*-- All Section --*/
 
   .section-header {
-    padding: 33px 16px 25px 20px;
+    padding: 10px 16px 10px 16px;
     line-height: 40px;
   }
 
@@ -137,12 +136,12 @@
     padding-right: 15px;
   }
 
-  .section-bio {
+  .section-bio, .section-contact, .section-underconstruction {
     display: inline-block;
     width: 100%;
   }
 
-  .section-bio-left {
+  .section-bio-left, .section-contact-left {
     float: left;
     width: 50%;
     font-size: 30px;
@@ -150,7 +149,15 @@
     color: rgba(0, 0, 0, 0.47);
   }
 
-  .section-bio-right {
+  .section-underconstruction-center {
+    float: left;
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.47);
+  }
+
+  .section-bio-right, .section-contact-right {
     float: left;
     width: 45%;
     font-size: 13px;
@@ -169,7 +176,8 @@
   .layout-right {
     float: left;
     width: 9.27%;
-    margin-top: -11px;
+    margin: 40px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
     text-align: center;
   }
 
@@ -488,7 +496,7 @@
     /*-- All Section <main> --*/
 
     .section-header {
-      padding: 33px 16px 25px 20px;
+      padding: 10px 16px 10px 16px;
       line-height: 40px;
     }
 
@@ -509,15 +517,15 @@
       margin-top: 0px;
     }
 
-    .section-bio-left {
+    .section-bio-left, .section-contact-left {
       width: 100%;
     }
 
-    .section-bio-right {
+    .section-bio-right, .section-contact-right {
       width: 100%;
     }
 
-    .text-bio-header {
+    .text-bio-header, .text-contact-header, .text-underconstruction-header {
       margin: 0;
     }
 

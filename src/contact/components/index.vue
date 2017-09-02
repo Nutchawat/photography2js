@@ -1,9 +1,9 @@
 <template>
-  <div class="section-bio">
-    <div class="section-bio-left">
-      <div class="text-bio-header">{{ contact.head }}</div>
+  <div class="section-contact">
+    <div class="section-contact-left">
+      <div class="text-contact-header">{{ contact.head }}</div>
     </div>
-    <div class="section-bio-right">
+    <div class="section-contact-right">
       <br>
       <br>
       <br>

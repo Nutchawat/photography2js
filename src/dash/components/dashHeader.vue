@@ -1,26 +1,5 @@
 <template>
-  <div id="dash-header">
-    <nav v-show="adminDisp" class="navbar-default nav-admin" id="nav-admin">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <router-link :to="{ name: 'home' }" class="navbar-brand">
-            <span>{{ username }}</span>
-          </router-link>
-        </div>
-        <ul class="nav navbar-nav pull-left">
-          <li class="pull-left">
-            <router-link :to="{ name: 'admin' }">
-              <span>Upload</span>
-            </router-link>
-          </li>
-          <li class="pull-left">
-            <router-link :to="{ name: 'home' }">
-              <span>Logout</span>
-            </router-link>
-          </li>
-        </ul>
-      </div>
-    </nav>
+  <div id="dash-header" class="dash-header">
     <nav class="clearfix section-header" id="section-header">
       <ul class="clearfix font-size-body topnav" :class="{ 'responsive' : mobileMenuDisp }">
         <li class="layout-left font-size-header">
@@ -29,12 +8,12 @@
             <!-- <span>vvpfoto</span> -->
           </router-link>
         </li>
-        <li class="clearfix nav-column layout-right" :class="{ 'active-page' : $route.name === 'personalI' }">
+        <li class="clearfix nav-column layout-right -personal1" :class="{ 'active-page' : $route.name === 'personalI' }">
           <router-link :to="{ name: 'personalI' }">
             <span>PERSONAL I</span>
           </router-link>
         </li>
-        <li class="clearfix nav-column layout-right" :class="{ 'active-page' : $route.name === 'personalII' }">
+        <li class="clearfix nav-column layout-right -personal2" :class="{ 'active-page' : $route.name === 'personalII' }">
           <router-link :to="{ name: 'personalII' }">
             <span>PERSONAL II</span>
           </router-link>
@@ -72,8 +51,6 @@
     name: 'dash-header',
     data () {
       return {
-        adminDisp: false,
-        username: 'admin',
         mobileMenuDisp: false
       }
     },
@@ -84,3 +61,14 @@
     }
   }
 </script>
+
+<style lang="scss">
+  #dash-header {
+    .-personal1 {
+      margin-right: 35px;
+    }
+    .-personal2 {
+      margin-right: 20px;
+    }
+  }
+</style>

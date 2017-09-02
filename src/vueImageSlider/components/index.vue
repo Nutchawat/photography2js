@@ -1,18 +1,30 @@
 <template>
   <div name="image-sider">
+    <div class="rslides" v-for="number in [currentNumber]" transition="fade">
+      <div @click="triggerDetail(photos[currentNumber].folder, photos[currentNumber].subFolder)"
+            :style="{
+              position: 'relative',
+              height: divHeight,
+              width: divWidth
+            }">
+        <img :src="photos[currentNumber].name"
+             v-on:mouseover="stopRotation"
+             v-on:mouseout="startRotation"
+             :style="{
+               height: imgHeight,
+               width: imgWidth,
+               position: 'absolute',
+               top: 0,
+               left: 0,
+               right: 0,
+               margin: 'auto'
+             }"
+        />
+      </div>
+    </div>
     <p style="margin-left: 30px; cursor: pointer;">
       <a @click="prev">< Previous</a> || <a @click="next">Next ></a>
     </p>
-    <div class="rslides" v-for="number in [currentNumber]" transition="fade">
-      <a href="javascript:void(0)">
-        <div @click="triggerDetail(photos[currentNumber].folder, photos[currentNumber].subFolder)">
-          <img :src="photos[currentNumber].name"
-               v-on:mouseover="stopRotation"
-               v-on:mouseout="startRotation"
-          />
-        </div>
-      </a>
-    </div>
   </div>
 </template>
 
@@ -22,7 +34,13 @@
     data () {
       return {
         currentNumber: 0,
-        timer: null
+        timer: null,
+        width: 0,
+        height: 0,
+        divWidth: '',
+        divHeight: '',
+        imgWidth: '',
+        imgHeight: ''
       }
     },
     props: {
@@ -40,7 +58,19 @@
     ready () {
       this.startRotation()
     },
+    created () {
+      window.addEventListener('resize', this.handleResize)
+      this.handleResize()
+    },
     methods: {
+      handleResize () {
+        this.width = window.innerWidth || 0
+        this.height = window.innerHeight || 0
+        this.divHeight = (this.width > this.height) ? 0.70 * this.height + 'px' : 0.70 * this.height + 'px'
+        this.divWidth = (this.width > this.height) ? '100%' : this.width + 'px'
+        this.imgHeight = (this.width > this.height) ? 0.70 * this.height + 'px' : 'auto'
+        this.imgWidth = (this.width > this.height) ? 'auto' : this.width + 'px'
+      },
       triggerDetail (folder, subFolder) {
         this.togglePage('detail')
         this.receivedDetail({ folder: folder, subFolder: subFolder })
@@ -58,7 +88,6 @@
         } else {
           this.currentNumber += 1
         }
-        console.log(this.currentNumber)
       },
       prev () {
         if (this.currentNumber <= 0) {
@@ -66,8 +95,10 @@
         } else {
           this.currentNumber -= 1
         }
-        console.log(this.currentNumber)
       }
+    },
+    beforeDestroy () {
+      window.removeEventListener('resize', this.handleResize)
     }
   }
 </script>
