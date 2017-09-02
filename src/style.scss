@@ -462,6 +462,9 @@
 
   @media (max-width: 991px) {
     /*-- Navigator Top --*/
+    .-logo {
+      padding-left: 15px;
+    }
 
     li.icon a {
       float: right;

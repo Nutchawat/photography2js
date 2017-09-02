@@ -2,7 +2,7 @@
   <div id="dash-header" class="dash-header">
     <nav class="clearfix section-header" id="section-header">
       <ul class="clearfix font-size-body topnav" :class="{ 'responsive' : mobileMenuDisp }">
-        <li class="layout-left font-size-header">
+        <li class="layout-left font-size-header -logo">
           <router-link :to="{ name: 'home' }">
             <img alt="VVPHOTOGRAPHER" src="../../../static/img/Logo2017.svg" width="100" height="100">
             <!-- <span>vvpfoto</span> -->
@@ -39,7 +39,7 @@
           </router-link>
         </li>
         <li class="clearfix icon">
-          <a href="javascript:void(0);" @click="toggleMobileMenuDisp()">☰</a>
+          <a href="javascript:void(0);" @click="toggleMobileMenuDisp()" style="font-size: 30px;">☰</a>
         </li>
       </ul>
     </nav>
