@@ -18,14 +18,28 @@
     props: {
       dashBodyLoading: {
         type: Boolean,
-        default: true
+        default: true,
+        width: 0,
+        height: 0
       }
     },
+    created () {
+      window.addEventListener('resize', this.handleResize)
+      this.handleResize()
+    },
     methods: {
+      handleResize () {
+        this.width = window.innerWidth || 0
+        this.height = Math.max(window.innerHeight, document.body.clientHeight) || 0
+      },
       dashBodyLoadingCondition (dashBodyLoading, routeName) {
-        let routeLoadings = [ 'home', 'personalI', 'personalII', 'workI', 'workII' ]
+        let routeLoadings = [ 'home', 'personalI' ]
+        // let routeLoadings = [ 'home', 'personalI', 'personalII', 'workI', 'workII' ]
         return dashBodyLoading && routeLoadings.indexOf(routeName) > -1
       }
+    },
+    beforeDestroy () {
+      window.removeEventListener('resize', this.handleResize)
     }
   }
 </script>

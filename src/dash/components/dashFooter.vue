@@ -1,6 +1,6 @@
 <template>
   <div id="dash-footer">
-    <footer class="font-style font-size-body section-footer">
+    <div class="font-style font-size-body section-footer">
       <div class="pull-left">© COPYRIGHT 2016 BY VV PHOTOGRAPHER</div>
       <div class="section-right">
         <div class="pull-left nav-footer">
@@ -20,7 +20,7 @@
           <span id="text-footer"><a :href="dashFooter.email">Email&nbsp;</a></span>&nbsp;
         </div>
       </div>
-    </footer>
+    </div>
   </div>
 </template>
 

@@ -1,5 +1,8 @@
 <template>
   <div name="image-sider">
+<!--     <p style="margin-left: 30px; cursor: pointer;">
+      <a @click="prev">< Previous</a> || <a @click="next">Next ></a>
+    </p> -->
     <div class="rslides" v-for="number in [currentNumber]" transition="fade">
       <div @click="triggerDetail(photos[currentNumber].folder, photos[currentNumber].subFolder)"
             :style="{
@@ -22,9 +25,6 @@
         />
       </div>
     </div>
-    <p style="margin-left: 30px; cursor: pointer;">
-      <a @click="prev">< Previous</a> || <a @click="next">Next ></a>
-    </p>
   </div>
 </template>
 

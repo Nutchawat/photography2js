@@ -14,7 +14,7 @@
     height: 100%;
     box-sizing: border-box;
   }
-
+  
   body #login {
     background: #f5f5f5;
   }
@@ -157,6 +157,14 @@
     color: rgba(0, 0, 0, 0.47);
   }
 
+  @media (max-width: 991px) {
+    .text-underconstruction-header {
+      background: #fff;
+      margin: 100px 50px 0 50px;
+      padding: 150px 0 10px 0;
+    }
+  }
+
   .section-bio-right, .section-contact-right {
     float: left;
     width: 45%;
@@ -187,10 +195,10 @@
     height: 50px;
     background: rgba(204, 204, 204, 0.38);
     padding: 18px 0 0 20px;
-  }
-
-  footer {
-    position: relative;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
 
   /*-- GoTop Button--*/
