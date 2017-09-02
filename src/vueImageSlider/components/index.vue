@@ -1,30 +1,32 @@
 <template>
   <div name="image-sider">
-<!--     <p style="margin-left: 30px; cursor: pointer;">
+    <p style="margin: 0px 0px 0px 30px; padding: 0px 0px 0px 0px; cursor: pointer;">
       <a @click="prev">< Previous</a> || <a @click="next">Next ></a>
-    </p> -->
+    </p>
     <div class="rslides" v-for="number in [currentNumber]" transition="fade">
-      <div @click="triggerDetail(photos[currentNumber].folder, photos[currentNumber].subFolder)"
-            :style="{
+      <div  :style="{
               position: 'relative',
               height: divHeight,
-              width: divWidth,
-              cursor: 'pointer'
+              width: divWidth
             }">
-        <img :src="photos[currentNumber].name"
-             @mouseover="stopRotation"
-             @mouseout="startRotation"
-             @contextmenu="disabledRightClick"
-             :style="{
-               height: imgHeight,
-               width: imgWidth,
-               position: 'absolute',
-               top: 0,
-               left: 0,
-               right: 0,
-               margin: 'auto'
-             }"
-        />
+        <transition name="bounce">
+          <img :src="photos[currentNumber].name"
+               @mouseover="stopRotation"
+               @mouseout="startRotation"
+               @contextmenu="disabledRightClick"
+               @click="triggerDetail(photos[currentNumber].folder, photos[currentNumber].subFolder)"
+               :style="{
+                 height: imgHeight,
+                 width: imgWidth,
+                 position: 'absolute',
+                 top: 0,
+                 left: 0,
+                 right: 0,
+                 margin: 'auto',
+                 cursor: 'pointer'
+               }"
+          />
+        </transition>
       </div>
     </div>
   </div>
@@ -57,12 +59,12 @@
         type: Function
       }
     },
-    ready () {
-      this.startRotation()
-    },
     created () {
       window.addEventListener('resize', this.handleResize)
       this.handleResize()
+    },
+    mounted () {
+      this.startRotation()
     },
     methods: {
       disabledRightClick (event) {
@@ -71,9 +73,9 @@
       handleResize () {
         this.width = window.innerWidth || 0
         this.height = window.innerHeight || 0
-        this.divHeight = (this.width > this.height) ? 0.70 * this.height + 'px' : 0.70 * this.height + 'px'
+        this.divHeight = (this.width > this.height) ? 0.68 * this.height + 'px' : 0.68 * this.height + 'px'
         this.divWidth = (this.width > this.height) ? '100%' : this.width + 'px'
-        this.imgHeight = (this.width > this.height) ? 0.70 * this.height + 'px' : 'auto'
+        this.imgHeight = (this.width > this.height) ? 0.68 * this.height + 'px' : 'auto'
         this.imgWidth = (this.width > this.height) ? 'auto' : this.width + 'px'
       },
       triggerDetail (folder, subFolder) {
