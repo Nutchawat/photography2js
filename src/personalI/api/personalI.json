@@ -1,22 +1,22 @@
 {
-  "folderName": "PersonalI",
+  "folderName": "personalI",
   "subFolder": [ 
     {
       "folderName": "1_YUKA",
       "images": [
-        { "name": "1_MG_3791_1.jpg", "display": "W" },
-        { "name": "2_MG_3885_2.jpg", "display": "W" },
-        { "name": "3_MG_3997_3.jpg", "display": "W" },
+        { "name": "1_MG_3791_1.jpg", "display": "W", "isHome": true },
+        { "name": "2_MG_3885_2.jpg", "display": "W", "isHome": true },
+        { "name": "3_MG_3997_3.jpg", "display": "W", "isHome": true },
         { "name": "4_MG_4361_4.jpg", "display": "W" },
         { "name": "5_MG_4165_5.jpg", "display": "W" },
         { "name": "6_MG_4265_6.jpg", "display": "W" },
-        { "name": "7_MG_4215_Big7.jpg", "display": "W", "isSelect": true }
+        { "name": "7_MG_4215_Big7.jpg", "display": "W", "isHome": true , "isSelect": true }
       ]
     }, {
       "folderName": "2_Maryna_white",
       "images": [
         { "name": "1_MG_5426_1.jpg", "display": "H", "isSelect": true },
-        { "name": "2_MG_5393_2.jpg", "display": "H" },
+        { "name": "2_MG_5393_2.jpg", "display": "H", "isHome": true },
         { "name": "3_MG_5283_3.jpg", "display": "H" },
         { "name": "4_MG_5321_4.jpg", "display": "H" }
       ]
@@ -24,13 +24,13 @@
       "folderName": "3_Anna_WhiteWindow",
       "images": [
         { "name": "1_MG_7507_1.jpg", "display": "H", "isSelect": true },
-        { "name": "2_MG_7408_2.jpg", "display": "H" }
+        { "name": "2_MG_7408_2.jpg", "display": "H", "isHome": true }
       ]
     }, {
       "folderName": "4_PolinaFlower",
       "images": [
-        { "name": "1_MG_0775_1.jpg", "display": "H", "isSelect": true },
-        { "name": "2_MG_0163_2.jpg", "display": "H" }
+        { "name": "1_MG_0775_1.jpg", "display": "H", "isHome": true, "isSelect": true },
+        { "name": "2_MG_0163_2.jpg", "display": "H", "isHome": true }
       ]
     }, {
       "folderName": "5_Haruna",

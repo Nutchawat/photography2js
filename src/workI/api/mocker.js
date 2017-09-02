@@ -1,4 +1,4 @@
-let mockerJson = require('src/workI/api/mocker.json')
+let mockerJson = require('src/workI/api/workI.json')
 let galleryGenerator = require('src/galleryGenerator')
 
 export const mocker = {
