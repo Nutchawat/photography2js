@@ -9,7 +9,6 @@ let moduleConfig = (module) => {
 const routes = [
   {
     path: '/',
-    name: 'dash',
     component: load('dash'),
     children: [
       { path: '', name: 'home', component: lazyLoad('home') }
@@ -19,7 +18,6 @@ const routes = [
     name: 'dash',
     component: load('dash'),
     children: [
-      moduleConfig('home'),
       moduleConfig('personalI'),
       moduleConfig('personalII'),
       moduleConfig('workI'),

@@ -14,7 +14,13 @@ module.exports = {
           if (image.isSelect) {
             if (image.display === 'W') {
               ratio = 1.5047879616963065
+            } else if (image.display === 'W2') {
+              ratio = 1.8
             } else if (image.display === 'H') {
+              ratio = 0.6645454545454546
+            } else if (image.display === 'H2') {
+              ratio = 1.0
+            } else {
               ratio = 0.6645454545454546
             }
             /*
@@ -42,7 +48,13 @@ module.exports = {
         for (let image of subFolder.images) {
           if (image.display === 'W') {
             ratio = 1.5047879616963065
+          } else if (image.display === 'W2') {
+            ratio = 1.8
           } else if (image.display === 'H') {
+            ratio = 0.6645454545454546
+          } else if (image.display === 'H2') {
+            ratio = 1.0
+          } else {
             ratio = 0.6645454545454546
           }
           mockerDetail.push({

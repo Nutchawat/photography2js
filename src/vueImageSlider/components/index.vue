@@ -3,30 +3,28 @@
     <p style="margin: 0px 0px 0px 30px; padding: 0px 0px 0px 0px; cursor: pointer;">
       <a @click="prev">< Previous</a> || <a @click="next">Next ></a>
     </p>
-    <div class="rslides" v-for="number in [currentNumber]" transition="fade">
+    <div class="rslides" v-for="number in [currentNumber]">
       <div  :style="{
               position: 'relative',
               height: divHeight,
               width: divWidth
             }">
-        <transition name="bounce">
-          <img :src="photos[currentNumber].name"
-               @mouseover="stopRotation"
-               @mouseout="startRotation"
-               @contextmenu="disabledRightClick"
-               @click="triggerDetail(photos[currentNumber].folder, photos[currentNumber].subFolder)"
-               :style="{
-                 height: imgHeight,
-                 width: imgWidth,
-                 position: 'absolute',
-                 top: 0,
-                 left: 0,
-                 right: 0,
-                 margin: 'auto',
-                 cursor: 'pointer'
-               }"
-          />
-        </transition>
+        <img :src="photos[currentNumber].name"
+             @mouseover="stopRotation"
+             @mouseout="startRotation"
+             @contextmenu="disabledRightClick"
+             @click="triggerDetail(photos[currentNumber].folder, photos[currentNumber].subFolder)"
+             :style="{
+               height: imgHeight,
+               width: imgWidth,
+               position: 'absolute',
+               top: 0,
+               left: 0,
+               right: 0,
+               margin: 'auto',
+               cursor: 'pointer'
+             }"
+        />
       </div>
     </div>
   </div>
