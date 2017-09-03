@@ -11,7 +11,8 @@ export const mocker = {
       facebook: 'https://www.facebook.com/vvpfoto',
       flickr: 'https://www.flickr.com/photos/85714076@N05/',
       instagram: 'https://www.instagram.com/vvpfoto',
-      email: 'info@vvpfoto.com'
+      email: 'p.warach@gmail.com'
+      // email: 'info@vvpfoto.com'
     }
   }
 }

@@ -8,6 +8,11 @@ import App from 'src/App.vue'
 import { router } from 'src/router'
 import store from 'src/store'
 import * as dashTypes from 'src/dash/store/mutation-types'
+import * as homeTypes from 'src/home/store/mutation-types'
+import * as personalITypes from 'src/personalI/store/mutation-types'
+import * as personalIITypes from 'src/personalII/store/mutation-types'
+import * as workITypes from 'src/workI/store/mutation-types'
+import * as workIITypes from 'src/workII/store/mutation-types'
 
 import vueImageSlider from 'src/vueImageSlider/components/index.vue'
 import vuePerfectLayout from 'src/vuePerfectLayout/components/index.vue'
@@ -20,6 +25,23 @@ Vue.component('vue-perfect-layout', vuePerfectLayout)
 Vue.component('vue-light-gallery', vueLightGallery)
 
 router.beforeEach((to, from, next) => {
+  switch (to.name) {
+    case 'home':
+      store.commit(homeTypes.SET_HOME_TOGGLE_PAGE, 'index')
+      break
+    case 'personalI':
+      store.commit(personalITypes.SET_PERSONALI_TOGGLE_PAGE, 'index')
+      break
+    case 'personalII':
+      store.commit(personalIITypes.SET_PERSONALII_TOGGLE_PAGE, 'index')
+      break
+    case 'workI':
+      store.commit(workITypes.SET_WORKI_TOGGLE_PAGE, 'index')
+      break
+    case 'workII':
+      store.commit(workIITypes.SET_WORKII_TOGGLE_PAGE, 'index')
+      break
+  }
   store.commit(dashTypes.SET_DASH_FOOTER_DISP, true)
   next()
 })

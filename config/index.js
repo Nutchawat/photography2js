@@ -5,8 +5,10 @@ var env = require('../env')
 module.exports = {
   build: {
     env: require('./prod.env'),
-    index: path.resolve(__dirname, '../../../views/welcome.blade.php'),
-    assetsRoot: path.resolve(__dirname, '../../../../public/'),
+    index: path.resolve(__dirname, '../dist/index.html'),
+    assetsRoot: path.resolve(__dirname, '../dist/'),
+    // index: path.resolve(__dirname, '../../../views/welcome.blade.php'),
+    // assetsRoot: path.resolve(__dirname, '../../../../public/'),
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     productionSourceMap: true,

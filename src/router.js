@@ -9,12 +9,11 @@ let moduleConfig = (module) => {
 const routes = [
   {
     path: '/',
-    redirect: { name: 'home' }
-  }, {
-    path: '/admin',
-    name: 'admin',
-    component: lazyLoad('admin'),
-    meta: { requiresAuth: true }
+    name: 'dash',
+    component: load('dash'),
+    children: [
+      { path: '', name: 'home', component: lazyLoad('home') }
+    ]
   }, {
     path: '/',
     name: 'dash',
@@ -37,6 +36,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
+  base: '/',
   routes: routes,
   mode: 'history'
 })
