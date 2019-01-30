@@ -7,7 +7,7 @@
       <vue-perfect-layout v-show="indexDisp"
                           :photos="workII"
                           :togglePage="togglePage"
-                          :receivedDetail="receivedWorkIDetail"
+                          :receivedDetail="receivedWorkIIDetail"
       />
       <vue-light-gallery  v-show="detailDisp"
                           :photos="workIIDetail"
