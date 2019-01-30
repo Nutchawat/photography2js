@@ -18,6 +18,11 @@
             <span>PERSONAL II</span>
           </router-link>
         </li>
+        <li class="clearfix nav-column layout-right -personal3" :class="{ 'active-page' : $route.name === 'personalIII' }">
+          <router-link :to="{ name: 'personalIII' }">
+            <span>PERSONAL III</span>
+          </router-link>
+        </li>
         <li class="clearfix nav-column layout-right" :class="{ 'active-page' : $route.name === 'workI' }">
           <router-link :to="{ name: 'workI' }">
             <span>WORK I</span>
@@ -26,6 +31,11 @@
         <li class="clearfix nav-column layout-right" :class="{ 'active-page' : $route.name === 'workII' }">
           <router-link :to="{ name: 'workII' }">
             <span>WORK II</span>
+          </router-link>
+        </li>
+        <li class="clearfix nav-column layout-right" :class="{ 'active-page' : $route.name === 'workIII' }">
+          <router-link :to="{ name: 'workIII' }">
+            <span>WORK III</span>
           </router-link>
         </li>
         <li class="clearfix nav-column layout-right" :class="{ 'active-page' : $route.name === 'bio' }">
@@ -68,6 +78,9 @@
       margin-right: 35px;
     }
     .-personal2 {
+      margin-right: 20px;
+    }
+    .-personal3 {
       margin-right: 20px;
     }
   }
