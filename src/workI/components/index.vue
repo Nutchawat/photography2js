@@ -1,28 +1,32 @@
 <template>
   <div name="workI">
-    <!--<underconstruction />-->
-    <vue-perfect-layout v-show="indexDisp"
-                        :photos="workI"
-                        :togglePage="togglePage"
-                        :receivedDetail="receivedWorkIDetail"
-    />
-    <vue-light-gallery  v-show="detailDisp"
-                        :photos="workIDetail"
-                        :togglePage="togglePage"
-    />
+    <template v-if="workI.length === 0">
+      <underconstruction />
+    </template>
+    <template v-else>
+      <vue-perfect-layout v-show="indexDisp"
+                          :photos="workI"
+                          :togglePage="togglePage"
+                          :receivedDetail="receivedWorkIDetail"
+      />
+      <vue-light-gallery  v-show="detailDisp"
+                          :photos="workIDetail"
+                          :togglePage="togglePage"
+      />
+    </template>
   </div>
 </template>
 
 <script>
-  // import underconstruction from 'src/underconstruction/components'
+  import underconstruction from 'src/underconstruction/components'
   import { mapGetters, mapMutations, mapActions } from 'vuex'
   import * as types from 'src/workI/store/mutation-types'
 
   export default {
     name: 'workI',
-    // components: {
-    //   underconstruction
-    // }
+    components: {
+      underconstruction
+    },
     created () {
       this.receivedWorkI()
     },

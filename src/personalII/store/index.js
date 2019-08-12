@@ -8,7 +8,7 @@ export default {
   state: {
     indexDisp: true,
     detailDisp: false,
-    personalII: [[{}]],
+    personalII: [{}],
     personalIIDetail: [[{}]]
   },
   getters: {

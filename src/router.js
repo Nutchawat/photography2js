@@ -20,8 +20,10 @@ const routes = [
     children: [
       moduleConfig('personalI'),
       moduleConfig('personalII'),
+      moduleConfig('personalIII'),
       moduleConfig('workI'),
       moduleConfig('workII'),
+      moduleConfig('workIII'),
       moduleConfig('bio'),
       moduleConfig('contact')
     ]

@@ -1,16 +1,16 @@
 <template>
-  <div name="workII">
-    <template v-if="workII.length === 0">
+  <div name="workIII">
+    <template v-if="workIII.length === 0">
       <underconstruction />
     </template>
     <template v-else>
       <vue-perfect-layout v-show="indexDisp"
-                          :photos="workII"
+                          :photos="workIII"
                           :togglePage="togglePage"
-                          :receivedDetail="receivedWorkIIDetail"
+                          :receivedDetail="receivedWorkIIIDetail"
       />
       <vue-light-gallery  v-show="detailDisp"
-                          :photos="workIIDetail"
+                          :photos="workIIIDetail"
                           :togglePage="togglePage"
       />
     </template>
@@ -20,31 +20,31 @@
 <script>
   import underconstruction from 'src/underconstruction/components'
   import { mapGetters, mapMutations, mapActions } from 'vuex'
-  import * as types from 'src/workII/store/mutation-types'
+  import * as types from 'src/workIII/store/mutation-types'
 
   export default {
-    name: 'workII',
+    name: 'workIII',
     components: {
       underconstruction
     },
     created () {
-      this.receivedWorkII()
+      this.receivedWorkIII()
     },
     computed: {
       ...mapGetters({
-        indexDisp: types.GET_WORKII_INDEX_DISP,
-        detailDisp: types.GET_WORKII_DETAIL_DISP,
-        workII: types.GET_WORKII,
-        workIIDetail: types.GET_WORKII_DETAIL
+        indexDisp: types.GET_WORKIII_INDEX_DISP,
+        detailDisp: types.GET_WORKIII_DETAIL_DISP,
+        workIII: types.GET_WORKIII,
+        workIIIDetail: types.GET_WORKIII_DETAIL
       })
     },
     methods: {
       ...mapMutations({
-        togglePage: types.SET_WORKII_TOGGLE_PAGE
+        togglePage: types.SET_WORKIII_TOGGLE_PAGE
       }),
       ...mapActions({
-        receivedWorkII: types.RECEIVED_WORKII,
-        receivedWorkIIDetail: types.RECEIVED_WORKII_DETAIL
+        receivedWorkIII: types.RECEIVED_WORKIII,
+        receivedWorkIIIDetail: types.RECEIVED_WORKIII_DETAIL
       })
     }
   }

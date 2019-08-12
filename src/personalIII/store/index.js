@@ -1,6 +1,6 @@
-import * as workIITypes from 'src/workII/store/mutation-types'
+import * as personalIIITypes from 'src/personalIII/store/mutation-types'
 import * as dashTypes from 'src/dash/store/mutation-types'
-import workII from 'src/workII/api'
+import personalIII from 'src/personalIII/api'
 import swal from 'sweetalert'
 import store from 'src/store'
 
@@ -8,25 +8,25 @@ export default {
   state: {
     indexDisp: true,
     detailDisp: false,
-    workII: [{}],
-    workIIDetail: [[{}]]
+    personalIII: [{}],
+    personalIIIDetail: [[{}]]
   },
   getters: {
-    [workIITypes.GET_WORKII_INDEX_DISP] (state) {
+    [personalIIITypes.GET_PERSONALIII_INDEX_DISP] (state) {
       return state.indexDisp
     },
-    [workIITypes.GET_WORKII_DETAIL_DISP] (state) {
+    [personalIIITypes.GET_PERSONALIII_DETAIL_DISP] (state) {
       return state.detailDisp
     },
-    [workIITypes.GET_WORKII] (state) {
-      return state.workII
+    [personalIIITypes.GET_PERSONALIII] (state) {
+      return state.personalIII
     },
-    [workIITypes.GET_WORKII_DETAIL] (state) {
-      return state.workIIDetail
+    [personalIIITypes.GET_PERSONALIII_DETAIL] (state) {
+      return state.personalIIIDetail
     }
   },
   mutations: {
-    [workIITypes.SET_WORKII_TOGGLE_PAGE] (state, page) {
+    [personalIIITypes.SET_PERSONALIII_TOGGLE_PAGE] (state, page) {
       state.indexDisp = false
       state.detailDisp = false
       switch (page) {
@@ -41,20 +41,20 @@ export default {
           break
       }
     },
-    [workIITypes.SET_WORKII] (state, workII) {
-      state.workII = workII
+    [personalIIITypes.SET_PERSONALIII] (state, personalIII) {
+      state.personalIII = personalIII
     },
-    [workIITypes.SET_WORKII_DETAIL] (state, workIIDetail) {
-      state.workIIDetail = workIIDetail
+    [personalIIITypes.SET_PERSONALIII_DETAIL] (state, personalIIIDetail) {
+      state.personalIIIDetail = personalIIIDetail
     }
   },
   actions: {
-    [workIITypes.RECEIVED_WORKII] ({ commit }) {
+    [personalIIITypes.RECEIVED_PERSONALIII] ({ commit }) {
       store.commit(dashTypes.SET_DASH_BODY_LOADING, true)
-      workII.getWorkII()
+      personalIII.getPersonalIII()
         .then((response) => {
           const data = JSON.parse(response.request.response)
-          commit(workIITypes.SET_WORKII, data)
+          commit(personalIIITypes.SET_PERSONALIII, data)
           store.commit(dashTypes.SET_DASH_BODY_LOADING, false)
         })
         .catch((error) => {
@@ -62,12 +62,12 @@ export default {
           swal({title: '', text: data.response, html: true, type: 'error'})
         })
     },
-    [workIITypes.RECEIVED_WORKII_DETAIL] ({ commit }, folder) {
+    [personalIIITypes.RECEIVED_PERSONALIII_DETAIL] ({ commit }, folder) {
       store.commit(dashTypes.SET_DASH_BODY_LOADING, true)
-      workII.getWorkIIDetail(folder)
+      personalIII.getPersonalIIIDetail(folder)
         .then((response) => {
           const data = JSON.parse(response.request.response)
-          commit(workIITypes.SET_WORKII_DETAIL, data)
+          commit(personalIIITypes.SET_PERSONALIII_DETAIL, data)
           store.commit(dashTypes.SET_DASH_BODY_LOADING, false)
         })
         .catch((error) => {

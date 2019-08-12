@@ -34,7 +34,7 @@
       },
       dashBodyLoadingCondition (dashBodyLoading, routeName) {
         let routeLoadings = [ 'home', 'personalI' ]
-        // let routeLoadings = [ 'home', 'personalI', 'personalII', 'workI', 'workII' ]
+        // let routeLoadings = [ 'home', 'personalI', 'personalII', 'personalIII', 'workI', 'workII', 'workIII' ]
         return dashBodyLoading && routeLoadings.indexOf(routeName) > -1
       }
     },

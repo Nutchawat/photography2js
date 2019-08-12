@@ -1,23 +1,32 @@
 <template>
   <div name="personalI">
-    <vue-perfect-layout v-show="indexDisp"
-                        :photos="personalI"
-                        :togglePage="togglePage"
-                        :receivedDetail="receivedPersonalIDetail"
-    />
-    <vue-light-gallery  v-show="detailDisp"
-                        :photos="personalIDetail"
-                        :togglePage="togglePage"
-    />
+    <template v-if="personalI.length === 0">
+      <underconstruction />
+    </template>
+    <template v-else>
+      <vue-perfect-layout v-show="indexDisp"
+                          :photos="personalI"
+                          :togglePage="togglePage"
+                          :receivedDetail="receivedPersonalIDetail"
+      />
+      <vue-light-gallery  v-show="detailDisp"
+                          :photos="personalIDetail"
+                          :togglePage="togglePage"
+      />
+    </template>
   </div>
 </template>
 
 <script>
+  import underconstruction from 'src/underconstruction/components'
   import { mapGetters, mapMutations, mapActions } from 'vuex'
   import * as types from 'src/personalI/store/mutation-types'
 
   export default {
     name: 'personalI',
+    components: {
+      underconstruction
+    },
     created () {
       this.receivedPersonalI()
     },

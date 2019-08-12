@@ -1,6 +1,6 @@
-import * as workIITypes from 'src/workII/store/mutation-types'
+import * as workIIITypes from 'src/workIII/store/mutation-types'
 import * as dashTypes from 'src/dash/store/mutation-types'
-import workII from 'src/workII/api'
+import workIII from 'src/workIII/api'
 import swal from 'sweetalert'
 import store from 'src/store'
 
@@ -8,25 +8,25 @@ export default {
   state: {
     indexDisp: true,
     detailDisp: false,
-    workII: [{}],
-    workIIDetail: [[{}]]
+    workIII: [{}],
+    workIIIDetail: [[{}]]
   },
   getters: {
-    [workIITypes.GET_WORKII_INDEX_DISP] (state) {
+    [workIIITypes.GET_WORKIII_INDEX_DISP] (state) {
       return state.indexDisp
     },
-    [workIITypes.GET_WORKII_DETAIL_DISP] (state) {
+    [workIIITypes.GET_WORKIII_DETAIL_DISP] (state) {
       return state.detailDisp
     },
-    [workIITypes.GET_WORKII] (state) {
-      return state.workII
+    [workIIITypes.GET_WORKIII] (state) {
+      return state.workIII
     },
-    [workIITypes.GET_WORKII_DETAIL] (state) {
-      return state.workIIDetail
+    [workIIITypes.GET_WORKIII_DETAIL] (state) {
+      return state.workIIIDetail
     }
   },
   mutations: {
-    [workIITypes.SET_WORKII_TOGGLE_PAGE] (state, page) {
+    [workIIITypes.SET_WORKIII_TOGGLE_PAGE] (state, page) {
       state.indexDisp = false
       state.detailDisp = false
       switch (page) {
@@ -41,20 +41,20 @@ export default {
           break
       }
     },
-    [workIITypes.SET_WORKII] (state, workII) {
-      state.workII = workII
+    [workIIITypes.SET_WORKIII] (state, workIII) {
+      state.workIII = workIII
     },
-    [workIITypes.SET_WORKII_DETAIL] (state, workIIDetail) {
-      state.workIIDetail = workIIDetail
+    [workIIITypes.SET_WORKIII_DETAIL] (state, workIIIDetail) {
+      state.workIIIDetail = workIIIDetail
     }
   },
   actions: {
-    [workIITypes.RECEIVED_WORKII] ({ commit }) {
+    [workIIITypes.RECEIVED_WORKIII] ({ commit }) {
       store.commit(dashTypes.SET_DASH_BODY_LOADING, true)
-      workII.getWorkII()
+      workIII.getWorkIII()
         .then((response) => {
           const data = JSON.parse(response.request.response)
-          commit(workIITypes.SET_WORKII, data)
+          commit(workIIITypes.SET_WORKIII, data)
           store.commit(dashTypes.SET_DASH_BODY_LOADING, false)
         })
         .catch((error) => {
@@ -62,12 +62,12 @@ export default {
           swal({title: '', text: data.response, html: true, type: 'error'})
         })
     },
-    [workIITypes.RECEIVED_WORKII_DETAIL] ({ commit }, folder) {
+    [workIIITypes.RECEIVED_WORKIII_DETAIL] ({ commit }, folder) {
       store.commit(dashTypes.SET_DASH_BODY_LOADING, true)
-      workII.getWorkIIDetail(folder)
+      workIII.getWorkIIIDetail(folder)
         .then((response) => {
           const data = JSON.parse(response.request.response)
-          commit(workIITypes.SET_WORKII_DETAIL, data)
+          commit(workIIITypes.SET_WORKIII_DETAIL, data)
           store.commit(dashTypes.SET_DASH_BODY_LOADING, false)
         })
         .catch((error) => {

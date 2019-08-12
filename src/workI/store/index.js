@@ -8,7 +8,7 @@ export default {
   state: {
     indexDisp: true,
     detailDisp: false,
-    workI: [[{}]],
+    workI: [{}],
     workIDetail: [[{}]]
   },
   getters: {
