@@ -1,7 +1,7 @@
 <template>
   <div id="dash-footer">
     <div class="font-style font-size-body section-footer">
-      <div class="pull-left">© COPYRIGHT 2016 BY VV PHOTOGRAPHER</div>
+      <div class="pull-left">© COPYRIGHT 2019 BY VV PHOTOGRAPHER</div>
       <div class="section-right">
         <div class="pull-left nav-footer">
           <i class="fa fa-facebook-square" aria-hidden="true" @click="openNewWindow(dashFooter.facebook)"></i>&nbsp;
